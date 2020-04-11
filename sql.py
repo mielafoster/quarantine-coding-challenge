@@ -10,7 +10,7 @@ import sqlite3
 
 connect_db = sqlite3.connect("firstdb.db")
 
-cursor = connection.cursor()
+cursor = connect_db.cursor()
 
 #Now we can create a table in the database
 sql_com = """ CREATE TABLE emp (fname VARCHAR(20), lname VARCHAR(30));"""
@@ -24,5 +24,5 @@ sql2_com = """ INSERT INTO emp VALUES("Miela", "Foster"); """
 cursor.execute(sql2_com)
 
 #Its important that before we close our connection we save the changes in the file we jsut created
-connection.commit()
-connection.close()
+connect_db.commit()
+connect_db.close()
