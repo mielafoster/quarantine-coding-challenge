@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <center>
+<title>Inquiry</title>
+  </center>
+
+<script type="text/javascript">
+  function validateForm() {
+    //create a variable that allows the form to take on a value
+    var x = document.forms["myForm"]["fname"].value
+    if (x == ""){
+      //if a null statement then return the following
+      alert("Name must be filled out");
+      return false;
+    }
+  }
+</script>
+</head>
+<body style = "background-color: Black">
+  <center>
+<font color="white"><h2>Submit an Inquiry </h2></font>
+<form name = "myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+
+
+<a href="page2.html" target="_self">Headshots</a>
+<a href="page3.html" target="_self">Performances</a>
+<a href="page4.html" target="_self">Mixed Media/Literature</a>
+<a href="page5.html" target="_self">Inquiry</a>
+</center>
+</body>
+</html>
